@@ -1,0 +1,29 @@
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+
+bool verifica(int x)
+{
+	int s = sqrt(x);
+	return (s * s == x);
+}
+
+bool ehFibonacci(int n)
+{
+	return verifica(5 * n * n + 4)
+		|| verifica(5 * n * n - 4);
+}
+
+int main()
+{
+    int i;
+    scanf("%d", &i);
+    
+	{
+		if (ehFibonacci(i))
+			printf("%d pertence a sequencia de Fibonacci \n", i);
+		else
+			printf("%d nao pertence a sequencia de Fibonacci \n", i);
+	}
+	return 0;
+}

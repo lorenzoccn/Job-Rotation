@@ -1,1 +1,21 @@
+#include <stdio.h>
 
+int main(){
+    
+    double faturamento[] = {67836.43, 36678.66, 29229.88, 27165.48, 19849.53}, total = 0, percentual;
+    
+    int escolha;
+    
+    for (int i=0;i<5;i++){
+        total = total + faturamento[i];
+    }
+    
+    printf("informe qual estado quer saber\n1 para Sao Paulo\n2 para Rio de Janeiro\n3 para Minas Gerais\n4 para Espirito Santo\n5 para outros:\n");
+    scanf("%d",&escolha);
+    
+    percentual = (faturamento[escolha-1]/total)*100;
+    
+    printf("%.2lf %%",percentual);
+    
+return 0;
+}
